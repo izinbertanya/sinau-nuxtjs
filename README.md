@@ -1,6 +1,6 @@
-# muhibb
+# Sinau Nuxt JS
 
-> My stunning Nuxt.js project
+> Sinau nuxtjs dari berbagai sumber
 
 ## Build Setup
 
