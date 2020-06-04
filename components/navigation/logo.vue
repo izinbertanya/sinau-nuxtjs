@@ -6,11 +6,18 @@
 
 <script>
 export default {
-  data () {
-    return {
-      link: '#',
-      src: 'https://dummyimage.com/214x59/206de0/ffffff',
-      alt: 'Ini Logo'
+  props: {
+    link: {
+      type: String,
+      default: '#'
+    },
+    src: {
+      type: String,
+      default: 'https://dummyimage.com/214x59/206de0/ffffff'
+    },
+    alt: {
+      type: String,
+      default: 'Logo'
     }
   }
 }

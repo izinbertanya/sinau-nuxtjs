@@ -5,7 +5,7 @@
         <Logo />
         <b-navbar-toggle target="nav-collapse" />
         <b-collapse id="nav-collapse" is-nav>
-          <Menu />
+          <Menu :menus="menus" />
         </b-collapse>
       </b-container>
       <b-container v-else>
@@ -24,6 +24,12 @@ import Menu from '~/components/navigation/menu.vue'
 export default {
   components: {
     Logo, Menu
+  },
+  props: {
+    menus: {
+      type: Array,
+      default: () => []
+    }
   },
   methods: {
     goBack () {

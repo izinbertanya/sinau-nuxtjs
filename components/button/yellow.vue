@@ -1,5 +1,5 @@
 <template>
-  <b-button pill variant="warning" :size="size">
+  <b-button :pill="pill" variant="warning" :size="size">
     <slot />
   </b-button>
 </template>
@@ -9,7 +9,11 @@ export default {
   props: {
     size: {
       type: String,
-      default: null
+      default: ''
+    },
+    pill: {
+      type: Boolean,
+      default: true
     }
   }
 }

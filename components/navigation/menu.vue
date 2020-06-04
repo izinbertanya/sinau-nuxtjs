@@ -8,24 +8,10 @@
 
 <script>
 export default {
-  data () {
-    return {
-      menus: [{
-        id: 1,
-        name: 'Home',
-        link: '#',
-        status: true
-      }, {
-        id: 2,
-        name: 'Blog',
-        link: '#',
-        status: false
-      }, {
-        id: 3,
-        name: 'About',
-        link: '#',
-        status: false
-      }]
+  props: {
+    menus: {
+      type: Array,
+      default: () => []
     }
   }
 }

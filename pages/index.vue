@@ -6,12 +6,16 @@
           v-for="item in posts.slice(0,current)"
           :key="item.key"
           :img="item.urlToImage"
-          :title="item.title"
-          :author="item.author"
-          :source="item.source.name"
-          :published-at="item.publishedAt"
-          :detail="item"
-        />
+        >
+          <b-card-text>
+            <small class="text-muted">{{ item.author }} - {{ item.source.name }}</small>
+          </b-card-text>
+          <b-card-title>{{ item.title }}</b-card-title>
+          <b-card-text>
+            <small class="text-muted">{{ item.publishedAt }}</small>
+          </b-card-text>
+          <btnYellow>Selengkapnya</btnYellow>
+        </Card>
       </div>
     </b-row>
     <div @click="loadMore()">
@@ -42,6 +46,10 @@ export default {
     loadMore () {
       this.current += 9
     }
+    // openDetail (data) {
+    //   this.$store.commit('SET_POSTS', data)
+    //   this.$router.replace({ path: '/detail' })
+    // }
   },
   head: {
     title: 'Ini Blog'
